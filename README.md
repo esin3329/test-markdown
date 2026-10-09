@@ -1,5 +1,7 @@
 # Link Doctor
 
+[English](README.md) | [한국어](README.ko.md)
+
 Link Doctor recursively checks local file and image links in Markdown documents. It does not modify input files and does not make network requests.
 
 ## Requirements
