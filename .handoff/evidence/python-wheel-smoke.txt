@@ -1,0 +1,3 @@
+Command: `uv build --wheel --out-dir /tmp/link-doctor-dist`; install `link_doctor-2.0.0-py3-none-any.whl` into isolated Python 3.12.15 venv `/tmp/link-doctor-wheel-venv`; run `link-doctor-py compile docs --output /tmp/link-doctor-wheel-compiled --format json`.
+
+Observed: wheel built successfully and contains Python modules, vendored wiki_compiler `graph.py`, `rewriter.py`, and MIT LICENSE. Installed-wheel CLI produced 2 compiled pages, `graph.json`, and diagnostics for 1 valid link (0 missing/skipped); exit 0. Existing docs are two orphan warnings only; they do not fail the command.

@@ -1,0 +1,16 @@
+Command: .venv/bin/link-doctor-py check /tmp/link-doctor-ingest --format json
+Input: three actual Docling-converted documents; source PDF/DOCX originals remained untouched. The DOCX export includes image_assets/...png. Two generated Markdown files contain explicit reciprocal [[wiki links]].
+
+{
+  "filesScanned": 3,
+  "counts": {"ok": 3, "missing": 0, "skipped": 0},
+  "results": [
+    {"source": "image.md", "line": 5, "target": "image_assets/image_000000_6945a72e82d4fa0020ca8f19906e0c7c682312b5f3988af24f65e0ad6e02dc73.png", "kind": "markdown", "status": "ok", "reason": "file exists"},
+    {"source": "sample-pdf.md", "line": 3, "target": "sample", "kind": "wiki", "status": "ok", "reason": "wiki target exists"},
+    {"source": "sample.md", "line": 5, "target": "sample-pdf", "kind": "wiki", "status": "ok", "reason": "wiki target exists"}
+  ],
+  "warnings": [
+    {"source": "image.md", "kind": "orphan", "status": "warning", "reason": "no incoming wiki links"}
+  ]
+}
+Exit: 0 (warnings are non-failing).

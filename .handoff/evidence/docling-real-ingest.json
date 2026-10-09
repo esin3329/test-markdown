@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "documents": [
+    {
+      "source": "image.docx",
+      "markdown": "image.md",
+      "sha256": "29aed0c7212923d19b6ae03ecb217904bcde291952472a1af15233d39ca0cb87",
+      "assets": [
+        "image_assets/image_000000_6945a72e82d4fa0020ca8f19906e0c7c682312b5f3988af24f65e0ad6e02dc73.png"
+      ],
+      "provenance": [
+        {"text": "Docling image asset sample", "level": 1, "page": null, "section": "Docling image asset sample", "markdown_line": 1},
+        {"text": "Referenced image output verification.", "level": 2, "page": null, "section": "Docling image asset sample", "markdown_line": 3}
+      ]
+    },
+    {
+      "source": "sample.docx",
+      "markdown": "sample.md",
+      "sha256": "96737ef31bdc6414b003bdfe812d6d0832b5aa547b3a0ef0a72e16d1098e1012",
+      "assets": [],
+      "provenance": [
+        {"text": "Docling DOCX smoke sample", "level": 1, "page": null, "section": null, "markdown_line": 1},
+        {"text": "한글 문서 변환 결과 확인", "level": 1, "page": null, "section": null, "markdown_line": 3}
+      ]
+    },
+    {
+      "source": "sample.pdf",
+      "markdown": "sample-pdf.md",
+      "sha256": "b9cb2faeb969a1a044fdb060c41fcd973e06863ae1a38856f00387e22c00910b",
+      "assets": [],
+      "provenance": [
+        {"text": "Docling PDF smoke sample", "level": 1, "page": 1, "section": null, "markdown_line": 1}
+      ]
+    }
+  ]
+}

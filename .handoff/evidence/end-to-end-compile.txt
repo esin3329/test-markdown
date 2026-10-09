@@ -1,0 +1,3 @@
+Command: .venv/bin/link-doctor-py compile /tmp/link-doctor-ingest --output /tmp/link-doctor-real-compiled --format json
+Observed: Compiled 3 pages into /tmp/link-doctor-real-compiled; graph: /tmp/link-doctor-real-compiled/graph.json
+Diagnostic summary: filesScanned=3; ok=3; missing=0; skipped=0; one separate orphan warning for image.md. graph.json records upstream revision b2b2b0ecf5f32d69e1cf6d9254216ab902f3d188.

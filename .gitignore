@@ -1,2 +1,7 @@
 node_modules/
 .antigravitycli/
+.venv/
+__pycache__/
+*.py[cod]
+.link-doctor/
+.cache/

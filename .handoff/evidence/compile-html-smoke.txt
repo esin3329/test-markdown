@@ -1,0 +1,2 @@
+Command: .venv/bin/link-doctor-py compile /tmp/link-doctor-ingest --output /tmp/link-doctor-real-compiled --format html
+Observed stdout begins with <!doctype html> and contains only a complete Link Doctor report, including an escaped table and a distinct orphan warning list. Compile summary appears on stderr. Exit: 0.

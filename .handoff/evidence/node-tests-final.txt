@@ -1,0 +1,13 @@
+Runtime: Node v24.21.0 (project-local Node binary)
+Command: npm test
+
+> link-doctor@1.0.0 test
+> node --test
+
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0

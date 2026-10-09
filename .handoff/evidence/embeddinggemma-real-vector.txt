@@ -1,0 +1,7 @@
+Environment: Python 3.12.15, torch 2.14.1+cu130, Transformers 5.19.0, Sentence Transformers 6.1.0; NVIDIA GeForce RTX 3060, CUDA BF16 supported.
+Command:
+.venv/bin/python -c 'import numpy as np; from link_doctor.search import _load_model,_encode; v=_encode(_load_model(None), ["safe local markdown link resolution"], "SearchQuery", 256); print({"shape": list(v.shape), "finite": bool(np.isfinite(v).all()), "l2_norm": float(np.linalg.norm(v[0]))})'
+
+Observed output: {'shape': [1, 256], 'finite': True, 'l2_norm': 1.0}
+Model: google/embeddinggemma-2@914f7f89142e33e77833254d9c9b90c3cef7303b.
+This used the actual downloaded model and inference path, not a mock.

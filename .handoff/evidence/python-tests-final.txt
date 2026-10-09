@@ -1,0 +1,6 @@
+Runtime: Python 3.12.15 (.venv)
+Command: .venv/bin/python -m unittest discover -s python_tests -v
+
+Ran 13 tests in 0.033s
+OK
+Tests: CLI HTML stream safety/output policy, lazy Docling errors, mocked ingestion provenance, Markdown/wiki links and anchors, alias/path ambiguity, symlink confinement, escaping, upstream graph/rewriter and duplicate-name behavior, code-excluded lexical graph relations, heading chunk provenance/numbering, mocked vector cache reuse/content invalidation.

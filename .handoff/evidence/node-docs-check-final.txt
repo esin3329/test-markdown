@@ -1,0 +1,7 @@
+Command: npm run check
+Runtime: Node v24.21.0
+
+Files scanned: 2
+Links: 1 (ok 1, missing 0, skipped 0)
+OK index.md:3 [link] "guide.md" — file exists
+Exit: 0
