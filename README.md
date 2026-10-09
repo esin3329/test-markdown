@@ -74,7 +74,7 @@ The entry point is `link-doctor-py` (equivalent to `python -m link_doctor`).
   ```sh
   link-doctor-py search <root> <query> [--top-k N] [--index-dir DIR] [--dimension 256] [--device DEVICE]
   ```
-  The search command uses `google/embeddinggemma-2` (exact revision `914f7f89142e33e77833254d9c9b90c3cef7303b`) with asymmetric `SearchQuery` + title-formatted `SearchDocument` embeddings, and symmetric `SentenceSimilarity` relation candidates. Embeddings are truncated to the target dimension and L2-normalized. Cache entries use a content-hash identity (including source/chunk content, model ID/revision, dimension, task, and chunk configuration). Stale generations are ignored but kept until the user manually removes `.link-doctor/index`.
+  The search command uses `google/embeddinggemma-2` (exact revision `914f7f89142e33e77833254d9c9b90c3cef7303b`) with asymmetric `SearchQuery` + title-formatted `SearchDocument` embeddings, and symmetric `SentenceSimilarity` relation candidates (cosine >= 0.55 among top-k query hits). Candidates remain unverified and are never auto-linked. Embeddings are truncated to the target dimension and L2-normalized. Cache entries use a content-hash identity (including source/chunk content, model ID/revision, dimension, task, and chunk configuration). Stale generations are ignored but kept until the user manually removes `.link-doctor/index`.
 
 ## Reports
 
