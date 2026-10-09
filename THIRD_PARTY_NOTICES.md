@@ -10,7 +10,7 @@ This project uses several third-party libraries and models. We gratefully acknow
 
 - **docling**: Document processing code is distributed under the MIT License. (Note: External models fetched by Docling may be subject to their own separate licenses).
   - Source: [https://github.com/docling-project/docling](https://github.com/docling-project/docling)
-- **wiki-compiler**: Integrated as a dependency for compiling Markdown documents and wiki links. Distributed under the MIT License.
+- **wiki-compiler**: Integrated as a dependency for compiling Markdown documents and wiki links (vendored at revision `b2b2b0ecf5f32d69e1cf6d9254216ab902f3d188`). Distributed under the MIT License.
   - Source: [https://github.com/Emmimal/wiki-compiler](https://github.com/Emmimal/wiki-compiler)
 - **sentence-transformers**: Used for semantic search when installed with `pip install -e '.[search]'`. Distributed under the Apache 2.0 License.
 - **PyTorch**: Deep learning framework required for embeddings. Distributed under the BSD License.
