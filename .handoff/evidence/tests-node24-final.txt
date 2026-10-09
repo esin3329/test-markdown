@@ -1,0 +1,20 @@
+✔ renders accurate counts and JSON contract (2.36127ms)
+✔ escapes report content in a standalone static HTML document (0.275433ms)
+✔ CLI emits text, JSON, and HTML to the selected destination with correct exit codes (2232.641519ms)
+✔ CLI returns 0 for clean documents and 2 for bad arguments, input, and output errors (5236.002587ms)
+✔ returns exit code 2 when a Markdown input cannot be read (740.135809ms)
+✔ scans local file, image, nested, missing, and reference links in stable order (83.29234ms)
+✔ skips code, resolves encoded and root-relative names, and reports reference use lines (13.622412ms)
+✔ marks existing file fragments unverified and missing targets missing (3.938171ms)
+✔ skips URLs, anchors, invalid encodings, traversal, and symlink escapes (4.413687ms)
+✔ does not follow symlink directories, traverses exclusions, and scans uppercase extensions (4.450595ms)
+✔ orders paths by UTF-16 code-unit order and same-line links by source occurrence (10.952417ms)
+✔ rejects a non-directory scan root (1.483736ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8337.108432

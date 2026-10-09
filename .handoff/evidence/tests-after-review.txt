@@ -1,0 +1,24 @@
+
+> link-doctor@1.0.0 test
+> node --test
+
+✔ renders accurate counts and JSON contract (2.946313ms)
+✔ escapes report content in a standalone static HTML document (0.32166ms)
+✔ CLI emits text, JSON, and HTML to the selected destination with correct exit codes (2284.6721ms)
+✔ CLI returns 0 for clean documents and 2 for bad arguments, input, and output errors (5236.037502ms)
+✔ returns exit code 2 when a Markdown input cannot be read (757.426681ms)
+✔ scans local file, image, nested, missing, and reference links in stable order (85.89404ms)
+✔ skips code, resolves encoded and root-relative names, and reports reference use lines (10.932751ms)
+✔ marks existing file fragments unverified and missing targets missing (4.550532ms)
+✔ skips URLs, anchors, invalid encodings, traversal, and symlink escapes (4.304204ms)
+✔ does not follow symlink directories, traverses exclusions, and scans uppercase extensions (5.955311ms)
+✔ orders paths by UTF-16 code-unit order and same-line links by source occurrence (11.87202ms)
+✔ rejects a non-directory scan root (1.76555ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8409.798517

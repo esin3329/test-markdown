@@ -1,0 +1,7 @@
+Files scanned: 3
+Links: 5 (ok 4, missing 1, skipped 0)
+OK index.md:3 [link] "assets/guide.md" — file exists
+MISSING index.md:4 [link] "assets/missing.md" — file does not exist
+OK index.md:5 [image] "images/pixel.png" — file exists
+OK index.md:6 [link] "nested/child.md" — file exists
+OK index.md:7 [link] "assets/guide.md" — file exists

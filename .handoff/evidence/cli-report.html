@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Link Doctor report</title>
+  <style>
+    :root { color-scheme: light dark; font: 16px/1.5 system-ui, sans-serif; }
+    body { margin: 2rem auto; padding: 0 1rem; max-width: 72rem; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #8888; padding: .5rem; text-align: left; overflow-wrap: anywhere; }
+    code { white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Link Doctor report</h1>
+  <p>Files scanned: 3. Links: 5 (ok 4, missing 1, skipped 0).</p>
+  <table>
+    <thead><tr><th>Status</th><th>Location</th><th>Kind</th><th>Target</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr><td>ok</td><td>index.md:3</td><td>link</td><td><code>assets/guide.md</code></td><td>file exists</td></tr>
+      <tr><td>missing</td><td>index.md:4</td><td>link</td><td><code>assets/missing.md</code></td><td>file does not exist</td></tr>
+      <tr><td>ok</td><td>index.md:5</td><td>image</td><td><code>images/pixel.png</code></td><td>file exists</td></tr>
+      <tr><td>ok</td><td>index.md:6</td><td>link</td><td><code>nested/child.md</code></td><td>file exists</td></tr>
+      <tr><td>ok</td><td>index.md:7</td><td>link</td><td><code>assets/guide.md</code></td><td>file exists</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>

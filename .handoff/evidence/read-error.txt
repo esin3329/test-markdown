@@ -1,0 +1,1 @@
+link-doctor: EACCES: permission denied, open '/tmp/tmp.IY2LXas8dL/docs/unreadable.md'

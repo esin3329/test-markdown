@@ -1,0 +1,20 @@
+{
+  "name": "link-doctor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Checks local Markdown links and emits text, JSON, or static HTML reports.",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node src/cli.js ./docs"
+  },
+  "dependencies": {
+    "mdast-util-from-markdown": "^2.0.2"
+  },
+  "devDependencies": {
+    "node": "^24.21.0"
+  }
+}

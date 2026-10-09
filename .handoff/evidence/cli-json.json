@@ -1,0 +1,50 @@
+{
+  "filesScanned": 3,
+  "counts": {
+    "ok": 4,
+    "missing": 1,
+    "skipped": 0
+  },
+  "results": [
+    {
+      "source": "index.md",
+      "line": 3,
+      "target": "assets/guide.md",
+      "kind": "link",
+      "status": "ok",
+      "reason": "file exists"
+    },
+    {
+      "source": "index.md",
+      "line": 4,
+      "target": "assets/missing.md",
+      "kind": "link",
+      "status": "missing",
+      "reason": "file does not exist"
+    },
+    {
+      "source": "index.md",
+      "line": 5,
+      "target": "images/pixel.png",
+      "kind": "image",
+      "status": "ok",
+      "reason": "file exists"
+    },
+    {
+      "source": "index.md",
+      "line": 6,
+      "target": "nested/child.md",
+      "kind": "link",
+      "status": "ok",
+      "reason": "file exists"
+    },
+    {
+      "source": "index.md",
+      "line": 7,
+      "target": "assets/guide.md",
+      "kind": "link",
+      "status": "ok",
+      "reason": "file exists"
+    }
+  ]
+}
