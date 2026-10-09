@@ -61,7 +61,7 @@ The entry point is `link-doctor-py` (equivalent to `python -m link_doctor`).
   link-doctor-py check <root> [--format text|json|html] [--output FILE]
   ```
   Exit status is `0` when no targets are missing (external and unsafe/out-of-root symlink links are skipped). It returns `1` for missing or ambiguous targets, and `2` for usage/I/O failures. HTML output will be rejected with `2` if it attempts to overwrite a Markdown input.
-- **Compile**: Compiles Markdown and wiki links, generating a graph and rewriting links.
+- **Compile**: Compiles Markdown and wiki links, generating a graph and rewriting links. Fenced and inline code spans are masked and excluded from lexical matching.
   ```sh
   link-doctor-py compile <root> [--output <dir>] [--format text|json|html]
   ```

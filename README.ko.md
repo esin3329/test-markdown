@@ -49,7 +49,7 @@ python -m unittest discover -s python_tests -v
   link-doctor-py check <root> [--format text|json|html] [--output FILE]
   ```
   대상 누락이 없으면(외부 링크 및 검사 루트 밖의 심볼릭 링크는 무시됨) `0`, 누락되거나 모호한 대상이 있으면 `1`, 인자/입출력 실패 시 `2`를 반환합니다. 마크다운 원본을 덮어쓰는 HTML 출력은 거부되어 종료 코드 `2`를 반환합니다.
-- **컴파일 (compile)**: 마크다운 및 위키 링크를 컴파일하고 그래프/의존성 분석 결과를 출력
+- **컴파일 (compile)**: 마크다운 및 위키 링크를 컴파일하고 그래프/의존성 분석 결과를 출력합니다. 코드 블록과 인라인 코드는 매칭에서 제외됩니다.
   ```sh
   link-doctor-py compile <root> [--output <dir>] [--format text|json|html]
   ```
