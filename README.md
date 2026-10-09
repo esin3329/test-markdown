@@ -2,21 +2,25 @@
 
 [English](README.md) | [한국어](README.ko.md)
 
-Link Doctor recursively checks local file and image links in Markdown documents. It does not modify input files and does not make network requests.
+Link Doctor provides tools to validate links, compile markdown with wiki links, ingest office documents into markdown, and semantically search documentation. It has two CLIs: a standalone Node.js scanner and a comprehensive Python CLI for compilation and search.
 
-## Requirements
+## Node.js CLI
+
+The Node.js CLI recursively checks local file and image links in Markdown documents. It does not modify input files and makes no network requests.
+
+### Requirements
 
 - Node.js 24.x
 - npm
 
-Install dependencies and run the test suite:
+Install dependencies and run the Node test suite:
 
 ```sh
 npm install
 npm test
 ```
 
-## Usage
+### Usage
 
 ```sh
 node src/cli.js ./docs
@@ -24,16 +28,55 @@ node src/cli.js ./docs --format json
 node src/cli.js ./docs --format html --output ./outputs/report.html
 ```
 
-Formats are `text` (default), `json`, and `html`. HTML is a self-contained static report; `--output` is supported only with HTML. The output parent directory must already exist. To preserve input documents, the CLI refuses an output path that resolves to a Markdown file under the scan root.
-
-The scanner walks `.md` files recursively and excludes `.git`, `node_modules`, and symlink entries. Relative paths resolve from each Markdown file; paths beginning with `/` resolve from the scan root. URL-encoded filenames are decoded. Local links, images, and reference links are checked; code blocks and inline code are ignored. A target must be a file. External URLs, anchor-only links, paths outside the root, and symlinks that resolve outside the root are skipped. File fragments are not validated; successful file links with fragments say `anchor not verified` in the result reason. Each result includes `source`, `line`, `target`, `kind`, `status` (`ok`, `missing`, or `skipped`), and `reason`.
+Formats are `text` (default), `json`, and `html`. HTML is a self-contained static report; `--output` is supported only with HTML. The output parent directory must already exist.
 
 Exit status is `0` when no missing targets are found, `1` when at least one target is missing or is not a file, and `2` for argument, input, read, or output errors.
+
+## Python CLI (AGY Support Expansion)
+
+The Python CLI expands capabilities to document ingestion, wiki link compilation, and semantic search. 
+
+### Requirements
+
+- Python >= 3.12, < 3.14
+
+Install core capabilities and run tests:
+
+```sh
+pip install -e .
+python -m unittest discover -s python_tests -v
+```
+
+Optional capabilities require additional dependencies (lazy-loaded):
+- `pip install -e '.[ingest]'` installs Docling for document conversion.
+- `pip install -e '.[search]'` installs Sentence Transformers / compatible Transformers and PyTorch.
+- `pip install -e '.[all]'` installs both extras.
+
+### Commands
+
+The entry point is `link-doctor-py` (equivalent to `python -m link_doctor`).
+
+- **Check**: Validates regular and `[[wiki links]]`.
+  ```sh
+  link-doctor-py check <root> [--format text|json|html] [--output FILE]
+  ```
+- **Compile**: Compiles Markdown and wiki links, generating a graph and rewriting links.
+  ```sh
+  link-doctor-py compile <root> [--output <dir>] [--format text|json|html]
+  ```
+- **Ingest**: Converts local PDF/DOCX into Markdown and extracts assets.
+  ```sh
+  link-doctor-py ingest <source-dir> --output <dir> [--recursive]
+  ```
+- **Search**: Semantic search using embeddings and a reusable local index.
+  ```sh
+  link-doctor-py search <root> <query> [--top-k N] [--index-dir DIR] [--dimension 256] [--device DEVICE]
+  ```
 
 ## Reports
 
 - Text: stable, line-oriented summary for terminals.
-- JSON: `filesScanned`, per-status `counts`, and ordered `results`.
-- HTML: one static document with escaped report content; it contains no executable scripts.
+- JSON: structured diagnostics and metrics.
+- HTML: self-contained static report for viewing in a browser.
 
-The sample documentation under [`docs/`](docs/index.md) is used for the CLI smoke check. Test fixtures live under [`test/fixtures/scan/`](test/fixtures/scan/index.md).
+The sample documentation under [`docs/`](docs/index.md) is used for CLI smoke checks. Test fixtures live under [`test/fixtures/scan/`](test/fixtures/scan/index.md).
