@@ -57,6 +57,7 @@ python -m unittest discover -s python_tests -v
   ```sh
   link-doctor-py ingest <source-dir> --output <dir> [--recursive]
   ```
+  *참고*: 기본적으로 텍스트 기반의 네이티브 문서 변환을 지원합니다. 스캔된 이미지의 OCR 변환은 외부 OCR 엔진 설치가 필요하며, 기본 제공 기능으로 검증되거나 보장되지 않습니다.
 - **검색 (search)**: 시맨틱 검색 인덱스 생성 및 쿼리
   ```sh
   link-doctor-py search <root> <query> [--top-k N] [--index-dir DIR] [--dimension 256] [--device DEVICE]

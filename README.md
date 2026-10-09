@@ -69,6 +69,7 @@ The entry point is `link-doctor-py` (equivalent to `python -m link_doctor`).
   ```sh
   link-doctor-py ingest <source-dir> --output <dir> [--recursive]
   ```
+  *Note*: Conversion supports native text documents. Scanned image OCR requires an external OCR engine to be installed; it is not currently exercised or claimed by default.
 - **Search**: Semantic search using a reusable local index.
   ```sh
   link-doctor-py search <root> <query> [--top-k N] [--index-dir DIR] [--dimension 256] [--device DEVICE]
