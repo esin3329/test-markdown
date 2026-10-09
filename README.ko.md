@@ -2,7 +2,7 @@
 
 [English](README.md) | [한국어](README.ko.md)
 
-Link Doctor는 Markdown 문서를 재귀적으로 탐색하여 로컬 파일과 이미지 링크를 검사하는 CLI입니다. Node.js 기반의 독립형 검사기와, AGY 문서 환경을 위해 Python으로 확장된 위키 컴파일 및 문서 변환, 시맨틱 검색 기능을 제공합니다.
+Link Doctor는 Markdown 문서를 재귀적으로 탐색하여 로컬 파일과 이미지 링크를 검사하는 CLI입니다. Node.js 기반의 독립형 검사기와 Python 기반의 위키 컴파일, 문서 변환, 시맨틱 검색 기능을 제공합니다.
 
 ## Node.js CLI (기본 검사기)
 
@@ -26,7 +26,7 @@ node src/cli.js ./docs --format html --output ./outputs/report.html
 ```
 출력 형식은 `text`(기본값), `json`, `html`입니다. 검사기는 대상 파일의 존재 여부만 판별하며, 상세한 링크 상태를 반환합니다. 
 
-## Python CLI (AGY 지원 확장)
+## Python CLI
 
 Docling을 이용한 오피스 문서(PDF, DOCX) 마크다운 변환, `wiki-compiler`를 통한 `[[wiki links]]` 컴파일, 그리고 `google/embeddinggemma-2` 임베딩 모델을 활용한 시맨틱 검색을 제공합니다.
 

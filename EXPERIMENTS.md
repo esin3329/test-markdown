@@ -12,7 +12,7 @@
 | Experiment | Evidence | Result |
 |---|---|---|
 | Parallel Orca worktree implementation | No Git repository; Orca repo is folder-kind | Not performed. No Git initialization or worker dispatch was made. |
-| Herdr review/test/manual panes | Herdr `status` succeeded; `HERDR_ENV` check returned “not 1” | Not performed; session control is disallowed from this shell. The requested independent review is handed to `agy` separately. |
+| Herdr review/test/manual panes | Herdr `status` succeeded; `HERDR_ENV` check returned “not 1” | Not performed; session control is disallowed from this shell. The requested independent review is handled separately. |
 | Herdr detach/reattach continuity | No Herdr-managed caller session | Not performed. |
 
 Task durations, post-instruction human intervention counts, and reassignment counts were not instrumented; no values are claimed. No tool-speed comparison is made.

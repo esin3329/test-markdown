@@ -1,6 +1,6 @@
 # Link Doctor expansion contract
 
-Implementation interface for AGY documentation. Update this file if the CLI or generated formats change.
+Implementation interface for project documentation. Update this file if the CLI or generated formats change.
 
 ## Package and runtime
 

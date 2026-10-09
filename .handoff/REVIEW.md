@@ -1,4 +1,4 @@
-# AGY 독립 리뷰·검증 보고서 — Link Doctor (최종 재검증)
+# 독립 리뷰·검증 보고서 — Link Doctor (최종 재검증)
 
 - 갱신 시각: 2026-10-09 12:19 (KST), 최종 상태 동기화, 기준: 최신 `.handoff/IMPLEMENTATION_READY.md`와 현재 `test/scan.test.js`
 - **최종 판정: APPROVED — 잔여 발견사항 없음, 차단 사항 없음. G1 해결됨.**

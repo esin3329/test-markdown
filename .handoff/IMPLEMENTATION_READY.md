@@ -14,7 +14,7 @@ Implemented Node.js 24 ESM CLI, `mdast-util-from-markdown` scanner, and text/JSO
 - `EXPERIMENTS.md` — only observed Orca/Herdr results; unavailable experiments explicitly marked not performed.
 - `.handoff/evidence/**` — captured test, CLI, docs, and read-error evidence.
 
-`PLAN.md` was not modified. `.handoff/AGY_REVIEW.md` remains owned by agy and was not modified.
+`PLAN.md` was not modified. The independent review report is recorded in `.handoff/REVIEW.md`.
 
 ## Reproduction and evidence
 
@@ -30,7 +30,7 @@ The fixture's `assets/missing.md` result is an intentional test input, not a pro
 
 ## Independent review disposition and constraints
 
-agy's `.handoff/AGY_REVIEW.md` identified one plan defect (F1) and refinements F2–F4, then one test-quality issue (G1). F1: successful file links with fragments say `file exists; anchor not verified`; missing targets with fragments remain `missing` / `file does not exist`. Scanner and text/JSON/HTML CLI regressions cover both. F2: empty and query-only links have distinct skip reasons. F3: stable sorting preserves source occurrence for same-line links. F4: source paths use locale-independent UTF-16 code-unit ordering (not Unicode scalar-value ordering). G1: path-order regression includes `B/z.md` and `Z.md`, which makes it fail under locale sorting. agy's final review marks G1 resolved with no remaining findings. Additional regression coverage includes Hangul and encoded spaces, reference images, directory targets, uppercase `.MD`, and unreadable input. Local Node 24.21.0 test suite passes 12/12; real docs scan is clean.
+The independent review in `.handoff/REVIEW.md` identified one plan defect (F1) and refinements F2–F4, then one test-quality issue (G1). F1: successful file links with fragments say `file exists; anchor not verified`; missing targets with fragments remain `missing` / `file does not exist`. Scanner and text/JSON/HTML CLI regressions cover both. F2: empty and query-only links have distinct skip reasons. F3: stable sorting preserves source occurrence for same-line links. F4: source paths use locale-independent UTF-16 code-unit ordering (not Unicode scalar-value ordering). G1: path-order regression includes `B/z.md` and `Z.md`, which makes it fail under locale sorting. The final review marks G1 resolved with no remaining findings. Additional regression coverage includes Hangul and encoded spaces, reference images, directory targets, uppercase `.MD`, and unreadable input. Local Node 24.21.0 test suite passes 12/12; real docs scan is clean.
 
 The working directory started without a Git repository; none was initialized. Orca runtime was ready, but this path is registered as folder-kind, so the plan's parallel Git-worktree worker experiment was not performed. Herdr 0.9.3 was running and protocol-compatible, but this shell lacks `HERDR_ENV=1`; its skill disallows session control here. Herdr split/detach/reattach experiments were not performed. Details: `EXPERIMENTS.md`.
 

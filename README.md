@@ -32,7 +32,7 @@ Formats are `text` (default), `json`, and `html`. HTML is a self-contained stati
 
 Exit status is `0` when no missing targets are found, `1` when at least one target is missing or is not a file, and `2` for argument, input, read, or output errors.
 
-## Python CLI (AGY Support Expansion)
+## Python CLI
 
 The Python CLI expands capabilities to document ingestion, wiki link compilation, and semantic search. 
 
