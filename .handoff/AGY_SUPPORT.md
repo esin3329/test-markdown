@@ -4,7 +4,7 @@
 
 ## 변경 파일
 - `README.md`, `README.ko.md`: Node CLI 정보를 유지하면서 Python 확장(검사, 컴파일, 문서 변환, 검색)에 대한 설치, 실행 환경, 명령어 예시, 검색 캐시 메커니즘, 종료 코드 정책 등을 추가했습니다.
-- `THIRD_PARTY_NOTICES.md`: 추가된 Python 종속성과 모델, 그리고 고정 리비전 정보(Docling, wiki-compiler, embeddinggemma-2, sentence-transformers 등)를 명시하고 출처 URL을 포함했습니다.
+- `THIRD_PARTY_NOTICES.md`: 추가된 Python 종속성과 모델, 그리고 고정 리비전 정보(Docling, wiki-compiler, embeddinggemma-2, sentence-transformers, transformers 등)를 명시하고 출처 URL을 포함했습니다.
 - `.handoff/AGY_SUPPORT.md`: 본 문서.
 
 ## 확인한 사실 / 공식 출처
