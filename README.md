@@ -38,7 +38,7 @@ The Python CLI expands capabilities to document ingestion, wiki link compilation
 
 ### Requirements
 
-- Python >= 3.12, < 3.14
+- Python >= 3.12, < 3.14 (Verified with Python 3.12.15)
 
 Install core capabilities and run tests:
 
@@ -48,8 +48,8 @@ python -m unittest discover -s python_tests -v
 ```
 
 Optional capabilities require additional dependencies (lazy-loaded):
-- `pip install -e '.[ingest]'` installs Docling for document conversion.
-- `pip install -e '.[search]'` installs Sentence Transformers / compatible Transformers and PyTorch.
+- `pip install -e '.[ingest]'` installs Docling (verified with 2.136.0) for document conversion.
+- `pip install -e '.[search]'` installs Sentence Transformers (>= 6.1, verified with 6.1.0), Transformers (>= 5.19, verified with 5.19.0), and PyTorch (verified with 2.14.1).
 - `pip install -e '.[all]'` installs both extras.
 
 ### Commands
@@ -60,6 +60,7 @@ The entry point is `link-doctor-py` (equivalent to `python -m link_doctor`).
   ```sh
   link-doctor-py check <root> [--format text|json|html] [--output FILE]
   ```
+  Exit status is `0` when no targets are missing (external and unsafe/out-of-root symlink links are skipped). It returns `1` for missing or ambiguous targets, and `2` for usage/I/O failures. HTML output will be rejected with `2` if it attempts to overwrite a Markdown input.
 - **Compile**: Compiles Markdown and wiki links, generating a graph and rewriting links.
   ```sh
   link-doctor-py compile <root> [--output <dir>] [--format text|json|html]
@@ -68,10 +69,11 @@ The entry point is `link-doctor-py` (equivalent to `python -m link_doctor`).
   ```sh
   link-doctor-py ingest <source-dir> --output <dir> [--recursive]
   ```
-- **Search**: Semantic search using embeddings and a reusable local index.
+- **Search**: Semantic search using a reusable local index.
   ```sh
   link-doctor-py search <root> <query> [--top-k N] [--index-dir DIR] [--dimension 256] [--device DEVICE]
   ```
+  The search command uses `google/embeddinggemma-2` (exact revision `914f7f89142e33e77833254d9c9b90c3cef7303b`) with asymmetric `SearchQuery` + title-formatted `SearchDocument` embeddings, and symmetric `SentenceSimilarity` relation candidates. Embeddings are truncated to the target dimension and L2-normalized. Cache entries use a content-hash identity (including source/chunk content, model ID/revision, dimension, task, and chunk configuration). Stale generations are ignored but kept until the user manually removes `.link-doctor/index`.
 
 ## Reports
 
